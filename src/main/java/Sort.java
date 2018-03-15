@@ -6,7 +6,7 @@
 public class Sort
     {
         /**
-         * 快速排序算法
+         * 快速排序
          *
          * @param array
          *         待排序数组
@@ -36,16 +36,48 @@ public class Sort
                     {
                         j--;
                     }
-                    array[i]=array[j];
+                    array[i] = array[j];
                     while (array[i] <= key && i < j)
                     {
                         i++;
                     }
-                    array[j]=array[i];
+                    array[j] = array[i];
                 }
-                array[i]=key;
-                quickSort(array, start, i-1);
-                quickSort(array, i+1, end);
+                array[i] = key;
+                quickSort(array, start, i - 1);
+                quickSort(array, i + 1, end);
                 return array;
             }
+        
+        /**
+         * 选择排序，升序
+         *
+         * @param array
+         * @param start
+         * @param end
+         *
+         * @return
+         */
+        public static int[] selSort(int[] array, int start, int end)
+            {
+                int temp;
+                int tempPos ;
+                for (int i = start; i <= end - 1; i++)
+                {
+                    temp = array[i];
+                    tempPos=i;
+                    for (int j = i + 1; j <= end; j++)
+                    {
+                        if (temp > array[j])
+                        {
+                            temp = array[j];
+                            tempPos = j;
+                        }
+                    }
+                    array[tempPos] = array[i];
+                    array[i] = temp;
+                }
+                return array;
+            }
+        
     }
