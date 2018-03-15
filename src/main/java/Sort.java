@@ -79,5 +79,34 @@ public class Sort
                 }
                 return array;
             }
-        
+    
+    
+        /**
+         * 冒泡排序
+         *
+         * @param array
+         * @param start
+         * @param end
+         *         数组结束下标
+         *
+         * @return
+         */
+        public static int[] bubbleSort(int[] array, int start, int end)
+            {
+                int temp;
+                for (int i = start; i < end; i++)
+                {
+                    for (int j = start; j < end - i; j++)
+                    {
+                        if (array[j]>array[j+1])
+                        {
+                            temp=array[j];
+                            array[j]=array[j+1];
+                            array[j+1]=temp;
+                        }
+                    }
+                }
+                return array;
+            }
+            
     }
