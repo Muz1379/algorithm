@@ -3,7 +3,7 @@
  * @date: 2018.3.12
  * @decription: 快速排序
  */
-public class QuickSort
+public class Sort
     {
         /**
          * 快速排序算法
@@ -17,7 +17,7 @@ public class QuickSort
          *
          * @return
          */
-        int[] quickSort(int[] array, int start, int end)
+        public static int[] quickSort(int[] array, int start, int end)
             {
                 if (start >= end)
                 {
